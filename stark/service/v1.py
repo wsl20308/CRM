@@ -151,11 +151,11 @@ class Changelist(object):
             for field_name in self.list_dsplay:
                 if isinstance(field_name, str):
                     val = getattr(row, field_name)
-                    #判断field在不在edit_name中，在变成a标签,反向生成url,获取url的参数
-                    if field_name in self.edit_link:
-                        val = self.edit_link_tag(row.pk,val)
                 else:
                     val = field_name(self.config,row)
+                # 判断field在不在edit_name中，在变成a标签,反向生成url,获取url的参数
+                if field_name in self.edit_link:
+                    val = self.edit_link_tag(row.pk, val)
                 temp.append(val)
 
             new_data_list.append(temp)

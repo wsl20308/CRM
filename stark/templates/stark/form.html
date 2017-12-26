@@ -8,7 +8,7 @@
                     <!-- 判断，如果field是ModelChoiceField，则FK； 如果是ModelMultipleChoiceField，则M2M -->
                     {{ dic.item }}
                     {% if dic.is_popup %}
-                        <div style="position: absolute;right: -20px;top: 10px;">
+                        <div style="position: absolute;right: -10px;top: 10px;">
                             <a onclick="popUp('{{ dic.popup_url }}')" class="glyphicon glyphicon-plus" style="color: #4cae4c"></a>
                         </div>
                     {% endif %}

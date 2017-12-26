@@ -76,8 +76,8 @@ class ClassList(models.Model):
     graduate_date = models.DateField(verbose_name="结业日期", null=True, blank=True)
     memo = models.CharField(verbose_name='说明', max_length=256, blank=True, null=True, )
     # teachers = models.ManyToManyField(verbose_name='任课老师', to='UserInfo', related_name='teach_classes',limit_choices_to={'depart_id__in':[1003,1004],})
-    teachers = models.ManyToManyField(verbose_name='任课老师', to='UserInfo', related_name='teach_classes',limit_choices_to={'depart_id__in':[1003,1004],})
-    tutor = models.ForeignKey(verbose_name='班主任', to='UserInfo', related_name='classes',limit_choices_to={'depart_id':1002})
+    teachers = models.ManyToManyField(verbose_name='任课老师', to='UserInfo', related_name='teach_classes',limit_choices_to={'depart_id__in':[1006,1007],})
+    tutor = models.ForeignKey(verbose_name='班主任', to='UserInfo', related_name='classes',limit_choices_to={'depart_id':1009})
 
 
 
