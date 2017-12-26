@@ -92,6 +92,7 @@ class Changelist(object):
         self.model_class = config.model_class
         self.request = config.request
         self.show_add_btn = config.get_show_add_btn()
+        self.edit_link = config.get_edit_link()
 
         #组合搜索
         self.combination_filter = config.get_combination_filter()
@@ -139,6 +140,9 @@ class Changelist(object):
             for field_name in self.list_dsplay:
                 if isinstance(field_name, str):
                     val = getattr(row, field_name)
+                    #判断field在不在edit_name中，在变成a标签,反向生成url,获取url的参数
+                    if field_name in self.edit_link:
+                        val = self.edit_link_tag(row.pk,val)
                 else:
                     val = field_name(self.config,row)
                 temp.append(val)
@@ -159,6 +163,12 @@ class Changelist(object):
                 row = FilterRow(option,option.get_choices(_filter),self.request)
                 print(row)
             yield row
+    #反向生成url,生成a标签
+    def edit_link_tag(self,pk,text):
+        query_str = self.request.GET.urlencode()
+        params = QueryDict(mutable=True)
+        params[self.config._query_param_key] = query_str
+        return mark_safe('<a href = "%s?%s">%s</a>' % (self.config.get_change_url(pk), params.urlencode(),text))
 
 class StarkConfing(object):
     # 1. 定制列表页面显示的列
@@ -196,7 +206,7 @@ class StarkConfing(object):
         data = []
         if self.list_dsplay:
             data.extend(self.list_dsplay)
-            data.append(StarkConfing.edit)
+            # data.append(StarkConfing.edit)
             data.append(StarkConfing.delete)
             data.insert(0, StarkConfing.checkbox)
         return data
@@ -254,6 +264,14 @@ class StarkConfing(object):
         if self.combination_filter:
             result.extend(self.combination_filter)
         return result
+    #自定义编辑按钮
+    edit_link = []
+    def get_edit_link(self):
+        result = []
+        if self.edit_link:
+            result.extend(self.edit_link)
+        return result
+
     #构造方法
     def __init__(self, model_class, site):
         self.model_class = model_class

@@ -19,5 +19,4 @@ from stark.service.v1 import site
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^stark/', site.urls),
-
 ]
