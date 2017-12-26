@@ -17,5 +17,8 @@ class DepartmentConfig(v1.StarkConfing):
 v1.site.register(models.Department,DepartmentConfig)
 class UserInfoConfig(v1.StarkConfing):
     list_dsplay = ['name','username','email','depart']
-    edit_link = []
+    edit_link = ['depart']
+    combination_filter = [
+        v1.FilterOption('depart',text_func_name=lambda x:str(x),val_func_name=lambda x:x.code,),
+    ]
 v1.site.register(models.UserInfo,UserInfoConfig)

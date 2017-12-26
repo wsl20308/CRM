@@ -10,24 +10,30 @@ from django.db.models import Q
 import copy
 import json
 class FilterOption(object):
-    def __init__(self,filter_name,multi=False,condition=None,is_choices=False):
+    def __init__(self,filter_name,multi=False,condition=None,is_choices=False,text_func_name=None,val_func_name=None):
         """
             app中stark  combination_filter配置
             :param field_name: 字段
             :param multi:  是否多选
             :param condition: 显示数据的筛选条件
             :param is_choice: 是否是choice
+            :param text_func_name:组合搜索时，页面上生成显示文本的函数
+            :param val_func_name=None:组合搜索时，页面上生成a标签中的值得函数，默认使用对象pk
             例：
                 combination_filter = [
                 v1.FilterOption('gender',is_choice=True),
                 v1.FilterOption('depart',condition={'id__gt':3}),
                 v1.FilterOption('role',True),
+                v1.FilterOption('depart',text_func_name=lambda x:str(x),val_func_name=lambda x:x.code,),
                                 ]
         """
         self.filter_name = filter_name
         self.multi=multi
         self.condition=condition
         self.is_choices=is_choices
+        self.text_func_name=text_func_name
+        self.val_func_name=val_func_name
+
     def get_queryset(self,_filter):
         """处理MTM,FK,判断有没有设置显示条数"""
         if self.condition:
@@ -36,6 +42,7 @@ class FilterOption(object):
     def get_choices(self,_filter):
         """处理choices类型数据"""
         return _filter.choices
+
 class FilterRow(object):
     def __init__(self,option,data,request):
         self.data = data
@@ -47,7 +54,6 @@ class FilterRow(object):
         current_id = params.get(self.option.filter_name)
         current_id_list = params.getlist(self.option.filter_name)
         if self.option.filter_name in params:
-            # del params[self.option.filter_name]
             origin_list = params.pop(self.option.filter_name)
             url = "{0}?{1}".format(self.request.path_info,params.urlencode())
             yield mark_safe("<a href='{0}'>全部</a>".format(url))
@@ -59,7 +65,9 @@ class FilterRow(object):
             if self.option.is_choices:
                 pk,text=str(val[0]),str(val[1])
             else:
-                pk,text=str(val.pk),str(val)
+                text = self.option.text_func_name(val) if self.option.text_func_name else str(val)
+                pk = str(self.option.val_func_name(val))if self.option.val_func_name else str(val.pk)
+
             if not self.option.multi:
                 #单选
                 params[self.option.filter_name] = pk
@@ -164,7 +172,6 @@ class Changelist(object):
                 row = FilterRow(option,option.get_queryset(_filter),self.request)
             else:
                 row = FilterRow(option,option.get_choices(_filter),self.request)
-                print(row)
             yield row
     #反向生成url,生成a标签
     def edit_link_tag(self,pk,text):
