@@ -1,32 +1,36 @@
-<form method="post" class="form-horizontal" novalidate>
+<form method="post"  class="form-horizontal" novalidate>
     {% csrf_token %}
     {% for dic in form %}
-        <div class="col-md-8 col-lg-offset-2">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">{{ dic.item.field.label }}:</label>
-                <div class="col-md-7">
+        <div class="col-sm-6">
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="inputEmail3" class="col-sm-2 control-label">{{ dic.item.field.label }}</label>
+                <div class="col-sm-10" style="position: relative">
+                    <!-- 判断，如果field是ModelChoiceField，则FK； 如果是ModelMultipleChoiceField，则M2M -->
                     {{ dic.item }}
                     {% if dic.is_popup %}
-                        <a onclick="popUp('{{ dic.popup_url }}')"><span class="glyphicon glyphicon-plus" style="color: green"></span></a>
+                        <div style="position: absolute;right: -20px;top: 10px;">
+                            <a onclick="popUp('{{ dic.popup_url }}')" class="glyphicon glyphicon-plus" style="color: #4cae4c"></a>
+                        </div>
                     {% endif %}
-                    {{ dic.item.field.errors.0 }}
+                    <div style="position: absolute;font-size: 12px;left: 15px; right: 15px;color: #e4393c;background: #FFEBEB;">{{ dic.item.errors.0 }}</div>
                 </div>
             </div>
         </div>
     {% endfor %}
-    <div class="col-md-8 col-lg-offset-7">
+    <div class="col-sm-offset-11 col-sm-1">
         <input type="submit" class="btn btn-primary" value="提交">
     </div>
 </form>
 <script>
-     function popupCallback(dic) {
+    function popupCallback(dic) {
         var op = document.createElement('option');
         op.value = dic.id;
         op.text = dic.text;
         op.setAttribute('selected','selected');
         document.getElementById(dic.popbackid).appendChild(op);
-     }
-     function popUp(url) {
+
+    }
+    function popUp(url) {
         var popupPage = window.open(url, url, "status=1, height:500, width:600, toolbar=0, resizeable=0");
     }
 </script>

@@ -1,5 +1,6 @@
 #! usr/bin/env python
 # -*- coding: utf-8 -*
+"""stark组件的主要数据处理"""
 from django.conf.urls import url
 from django.shortcuts import render,redirect
 from django.utils.safestring import mark_safe
@@ -113,6 +114,7 @@ class Changelist(object):
         self.data_list = queryset[page_obj.start:page_obj.end]
     #批量操作，用户自定制
     def modify_actions(self):
+        """用于action中显示文本和value属性值"""
         result = []
         for func in self.actions:
             temp = {'name':func.__name__,'text':func.short_desc}
@@ -133,6 +135,7 @@ class Changelist(object):
         return result
     #处理表数据
     def body_list(self):
+        """列表页面，数据表内容中显示每一行数据"""
         data_list = self.data_list
         new_data_list = []
         for row in data_list:
@@ -171,6 +174,20 @@ class Changelist(object):
         return mark_safe('<a href = "%s?%s">%s</a>' % (self.config.get_change_url(pk), params.urlencode(),text))
 
 class StarkConfing(object):
+    """用于处理stark组件中增删改查的基类，以后对于每个类都要继承该类，如：
+        class DepartmentConfig(v1.StarkConfing):
+            list_dsplay = ['id','title']
+            edit_link = ['title']
+            # def get_list_dsplay(self):
+            #     result = []
+            #     if self.list_dsplay:
+            #         result.extend(self.list_dsplay)
+            #         result.append(v1.StarkConfing.edit)
+            #         result.append(v1.StarkConfing.delete)
+            #         result.insert(0,v1.StarkConfing.checkbox)
+            #     return result
+        v1.site.register(models.Department,DepartmentConfig)
+    """
     # 1. 定制列表页面显示的列
     def checkbox(self, obj=None, is_header=False):
         if is_header:
