@@ -9,17 +9,19 @@
 <body>
     <table border="1">
        <thead>
-            <th>
-                <tr>QQ</tr>
-                <tr>姓名</tr>
-                <tr>状态</tr>
-            </th>
+            <tr>
+                <th>QQ</th>
+                <th>姓名</th>
+                <th>状态</th>
+            </tr>
        </thead>
        <tbody>
             {% for row in customer %}
-                <tr>{{ row.coustomer.qq }}</tr>
-                <tr>{{ row.coustomer.name }}</tr>
-                <tr>{{ row.status }}</tr>
+                <tr>
+                    <th>{{ row.customer.qq }}</th>
+                    <th>{{ row.customer.name }}</th>
+                    <th>{{ row.customer.status }}</th>
+                </tr>
             {% endfor %}
        </tbody>
     </table>

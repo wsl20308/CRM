@@ -10,17 +10,19 @@
     <table border="1">
         <thead>
             <tr>
-                <th>QQ</th>
                 <th>ID</th>
                 <th>姓名</th>
+                <th>QQ</th>
+                <th>跟进</th>
             </tr>
         </thead>
         <tbody>
             {% for row in coustomer_list %}
                 <tr>
-                    <th>{{ row.qq }}</th>
                     <th>{{ row.id }}</th>
                     <th>{{ row.name }}</th>
+                    <th>{{ row.qq }}</th>
+                    <th><a href="/stark/crm/customer/{{ row.id }}/competition/">抢单</a></th>
                 </tr>
             {% endfor %}
 
