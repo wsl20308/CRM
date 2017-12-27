@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d49994-d35a-4633-96e0-5770d14022c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/congfigs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/congfigs/customer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/highcharts-3d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery-1.12.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MDM/settings.py" afterPath="$PROJECT_DIR$/MDM/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/congfigs/customer.py" afterPath="$PROJECT_DIR$/crm/congfigs/customer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/models.py" afterPath="$PROJECT_DIR$/crm/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/stark.py" afterPath="$PROJECT_DIR$/crm/stark.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,37 +71,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crm/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="172" column="21" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="21" />
+            <state relative-caret-position="214">
+              <caret line="182" column="116" lean-forward="false" selection-start-line="182" selection-start-column="116" selection-end-line="182" selection-end-column="116" />
               <folding>
                 <element signature="e#96#339#0" expanded="false" />
                 <element signature="e#376#864#0" expanded="false" />
                 <element signature="e#899#1118#0" expanded="false" />
                 <element signature="e#1153#1355#0" expanded="false" />
                 <element signature="e#1393#2460#0" expanded="false" />
-                <element signature="e#5435#5717#0" expanded="false" />
-                <element signature="e#5759#6615#0" expanded="false" />
-                <element signature="e#6651#7743#0" expanded="false" />
-                <element signature="e#7784#8727#0" expanded="false" />
-                <element signature="e#8767#10246#0" expanded="false" />
+                <element signature="e#6003#6285#0" expanded="false" />
+                <element signature="e#6327#7183#0" expanded="false" />
+                <element signature="e#7219#8311#0" expanded="false" />
+                <element signature="e#8352#9295#0" expanded="false" />
+                <element signature="e#9335#10814#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crm/congfigs/customer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="409">
+              <caret line="41" column="83" lean-forward="false" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
               <folding>
                 <element signature="e#46#74#0" expanded="true" />
                 <element signature="e#384#461#0" expanded="false" />
                 <element signature="e#527#607#0" expanded="false" />
-                <element signature="e#1139#1731#0" expanded="false" />
+                <element signature="e#755#1095#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -212,11 +187,11 @@
         <option value="$PROJECT_DIR$/MDM/stark.py" />
         <option value="$PROJECT_DIR$/stark/templates/stark/form.html" />
         <option value="$PROJECT_DIR$/stark/service/v1.py" />
-        <option value="$PROJECT_DIR$/crm/models.py" />
         <option value="$PROJECT_DIR$/crm/stark.py" />
         <option value="$PROJECT_DIR$/MDM/settings.py" />
         <option value="$PROJECT_DIR$/templates/public_view.html" />
         <option value="$PROJECT_DIR$/crm/congfigs/customer.py" />
+        <option value="$PROJECT_DIR$/crm/models.py" />
       </list>
     </option>
   </component>
@@ -522,17 +497,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708019" sideWeight="0.83797055" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008320726" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23842196" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23842196" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25663716" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42024013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2536825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24281392" sideWeight="0.16202946" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -600,11 +575,11 @@
             <element signature="e#899#1118#0" expanded="false" />
             <element signature="e#1153#1355#0" expanded="false" />
             <element signature="e#1393#2460#0" expanded="false" />
-            <element signature="e#5435#5717#0" expanded="false" />
-            <element signature="e#5759#6615#0" expanded="false" />
-            <element signature="e#6651#7743#0" expanded="false" />
-            <element signature="e#7784#8727#0" expanded="false" />
-            <element signature="e#8767#10246#0" expanded="false" />
+            <element signature="e#6003#6285#0" expanded="false" />
+            <element signature="e#6327#7183#0" expanded="false" />
+            <element signature="e#7219#8311#0" expanded="false" />
+            <element signature="e#8352#9295#0" expanded="false" />
+            <element signature="e#9335#10814#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,11 +670,11 @@
             <element signature="e#899#1118#0" expanded="false" />
             <element signature="e#1153#1355#0" expanded="false" />
             <element signature="e#1393#2460#0" expanded="false" />
-            <element signature="e#5435#5717#0" expanded="false" />
-            <element signature="e#5759#6615#0" expanded="false" />
-            <element signature="e#6651#7743#0" expanded="false" />
-            <element signature="e#7784#8727#0" expanded="false" />
-            <element signature="e#8767#10246#0" expanded="false" />
+            <element signature="e#6003#6285#0" expanded="false" />
+            <element signature="e#6327#7183#0" expanded="false" />
+            <element signature="e#7219#8311#0" expanded="false" />
+            <element signature="e#8352#9295#0" expanded="false" />
+            <element signature="e#9335#10814#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -924,25 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="172" column="21" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="21" />
-          <folding>
-            <element signature="e#96#339#0" expanded="false" />
-            <element signature="e#376#864#0" expanded="false" />
-            <element signature="e#899#1118#0" expanded="false" />
-            <element signature="e#1153#1355#0" expanded="false" />
-            <element signature="e#1393#2460#0" expanded="false" />
-            <element signature="e#5435#5717#0" expanded="false" />
-            <element signature="e#5759#6615#0" expanded="false" />
-            <element signature="e#6651#7743#0" expanded="false" />
-            <element signature="e#7784#8727#0" expanded="false" />
-            <element signature="e#8767#10246#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1004,13 +960,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crm/congfigs/customer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="409">
+          <caret line="41" column="83" lean-forward="false" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
           <folding>
             <element signature="e#46#74#0" expanded="true" />
             <element signature="e#384#461#0" expanded="false" />
             <element signature="e#527#607#0" expanded="false" />
-            <element signature="e#1139#1731#0" expanded="false" />
+            <element signature="e#755#1095#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="182" column="116" lean-forward="false" selection-start-line="182" selection-start-column="116" selection-end-line="182" selection-end-column="116" />
+          <folding>
+            <element signature="e#96#339#0" expanded="false" />
+            <element signature="e#376#864#0" expanded="false" />
+            <element signature="e#899#1118#0" expanded="false" />
+            <element signature="e#1153#1355#0" expanded="false" />
+            <element signature="e#1393#2460#0" expanded="false" />
+            <element signature="e#6003#6285#0" expanded="false" />
+            <element signature="e#6327#7183#0" expanded="false" />
+            <element signature="e#7219#8311#0" expanded="false" />
+            <element signature="e#8352#9295#0" expanded="false" />
+            <element signature="e#9335#10814#0" expanded="false" />
           </folding>
         </state>
       </provider>

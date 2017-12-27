@@ -176,6 +176,22 @@ class Customer(models.Model):
         return "姓名:{0},QQ:{1}".format(self.name, self.qq, )
 
 
+class CustomerDistribution(models.Model):
+    """
+    客户分配表
+    """
+    user = models.ForeignKey(verbose_name='客户顾问',to='UserInfo',related_name='cds',limit_choices_to={'depart_id':1001})
+    customer = models.ForeignKey(verbose_name='客户',to='Customer',related_name='dealers')
+    ctime = models.DateField()
+    status_choices = (
+        (1,'正在跟进'),
+        (2,'已成单'),
+        (3,'3天未跟进'),
+        (4,'15天未成单'),
+    )
+    status = models.IntegerField(verbose_name='状态',choices=status_choices,default=1)
+    memo = models.CharField(verbose_name='更多信息',max_length=255)
+
 class ConsultRecord(models.Model):
     """
     客户跟进记录
