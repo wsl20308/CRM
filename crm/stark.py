@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from stark.service import v1
 from crm import models
+from crm.congfigs.customer import CustomerConfig
 class DepartmentConfig(v1.StarkConfing):
     """部门管理"""
     list_dsplay = ['id','title']
@@ -56,12 +57,5 @@ class ClassListConfig(v1.StarkConfing):
     list_dsplay = ['school',course_semester,num,'start_date']
     edit_link = [course_semester]
 v1.site.register(models.ClassList,ClassListConfig)
-class CustomerConfig(v1.StarkConfing):
-    """客户管理"""
-    def dsplay_gender(self,obj=None,is_header=False):
-        if is_header:
-            return "性别"
-        return obj.get_gender_display()
-    list_dsplay = ['qq','name',dsplay_gender]
-    edit_link = ['qq']
+
 v1.site.register(models.Customer,CustomerConfig)
