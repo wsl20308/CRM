@@ -24,7 +24,8 @@ class CustomerConfig(v1.StarkConfing):
         app_model_name = (self.model_class._meta.app_label, self.model_class._meta.model_name,)
         patterns = [
             # url(r'^(\d+)/(\d+)/dc/$', self.wrap(self.delete_course), name="%s_%s_dc" % app_model_name),
-            url(r'public/$',self.wrap(self.public_view),name="%s_%s_public"%app_model_name)
+            url(r'public/$',self.wrap(self.public_view),name="%s_%s_public"%app_model_name),
+            url(r'user/$', self.wrap(self.user_view), name="%s_%s_user" % app_model_name),
         ]
         return patterns
     def public_view(self,request):
@@ -40,3 +41,12 @@ class CustomerConfig(v1.StarkConfing):
 
         coustomer_list = models.Customer.objects.filter(Q(recv_date__lt=no_deal)|Q(last_consult_date__lt=no_follow),status=2)
         return render(request,"public_view.html",{'coustomer_list':coustomer_list})
+
+    def user_view(self,request):
+        """
+        :param rquest:当前登录用户的所有客户
+        :return:
+        """
+        session_user_id = 1
+        customer = models.CustomerDistribution.objects.filter(user_id=session_user_id).order_by('status')
+        return render(request,"user_view.html",{"customer":customer})

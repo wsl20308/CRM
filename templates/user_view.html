@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>当前用户的客户表</title>
+</head>
+<body>
+    <table border="1">
+       <thead>
+            <th>
+                <tr>QQ</tr>
+                <tr>姓名</tr>
+                <tr>状态</tr>
+            </th>
+       </thead>
+       <tbody>
+            {% for row in customer %}
+                <tr>{{ row.coustomer.qq }}</tr>
+                <tr>{{ row.coustomer.name }}</tr>
+                <tr>{{ row.status }}</tr>
+            {% endfor %}
+       </tbody>
+    </table>
+</body>
+</html>
