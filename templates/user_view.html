@@ -4,16 +4,16 @@
     <table class="table table-bordered">
        <thead>
             <tr>
-                <th>QQ</th>
                 <th>姓名</th>
+                <th>QQ</th>
 {#                <th>状态</th>#}
             </tr>
        </thead>
        <tbody>
             {% for row in customer %}
                 <tr>
-                    <th>{{ row.customer.qq }}</th>
                     <th>{{ row.customer.name }}</th>
+                    <th>{{ row.customer.qq }}</th>
 {#                    <th>{{ row.customer.status }}</th>#}
                 </tr>
             {% endfor %}

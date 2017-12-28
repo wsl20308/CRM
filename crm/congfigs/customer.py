@@ -7,6 +7,8 @@ from django.conf.urls import url
 import datetime
 from django.db.models import Q
 from django.forms import ModelForm
+from django.db import transaction
+from utils import message
 
 class SingleModelForm(ModelForm):
     """单条录入客户信息ModelForm"""
@@ -87,6 +89,37 @@ class CustomerConfig(v1.StarkConfing):
         models.CustomerDistribution.objects.create(user_id=current_user_id,customer_id=nid,ctime=ctime)
         return HttpResponse("抢单成功")
 
+    def single_view(self, request):
+        """
+        单条录入客户信息
+        :param request:
+        :return:
+        """
+        if request.method == "GET":
+            form = SingleModelForm
+            return render(request, "single_view.html", {'form': form})
+        else:
+            from xxxxxx import XXX
+            form = SingleModelForm(request.POST)
+            if form.is_valid():
+                try:
+                    with transaction.atomic():
+                        # 客户表新增客户信息
+                        sale_id = 2
+                        ctime = datetime.datetime.now().date()
+                        form.instance.consultant_id = sale_id
+                        form.instance.recv_date = ctime
+                        form.instance.last_consult_date = ctime
+                        new_customer = form.save()
+                        # 客户分配表，新增客户分配信息
+                        models.CustomerDistribution.objects.create(user_id=sale_id, customer=new_customer, ctime=ctime)
+                        # 发送消息，微信，邮件，短信
+                        message.send_message('877252373@qq.com', '放哨', '客户分配', '恭喜您分配到一位客户，请跟进，期待您成单。')
+                except Exception as e:
+                    return HttpResponse("录入成功")
+            else:
+                return render(request, "single_view.html", {'form': form})
+
     def user_view(self,request):
         """
         :param rquest:当前登录用户的所有客户
@@ -95,32 +128,3 @@ class CustomerConfig(v1.StarkConfing):
         session_user_id = 2      #登录用户
         customer = models.CustomerDistribution.objects.filter(user_id=session_user_id).order_by('status')
         return render(request,"user_view.html",{"customer":customer})
-
-    def single_view(self,request):
-        """
-        单条录入客户信息
-        :param request:
-        :return:
-        """
-        if request.method=="GET":
-            form = SingleModelForm
-            return render(request,"single_view.html",{'form':form})
-        else:
-            from xxxxxx import XXX
-            form = SingleModelForm(request.POST)
-            if form.is_valid():
-                form.save()
-                return redirect(self.get_changelist_url)
-                """客户表新增数据：
-                    - 获取该分配的课程顾问id
-                    - 当前时间
-                 客户分配表中新增数据
-                    - 获取新创建的客户ID
-                    - 顾问ID
-                """
-                sale_id = XXX.get_sale_id()
-                ctime = datetime.datetime.now()
-                models.CustomerDistribution.objects.create(customer_id=sale_id,status=ctime)
-                return HttpResponse("录入成功")
-            else:
-                return render(request, "single_view.html", {'form': form})
