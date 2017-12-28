@@ -288,15 +288,24 @@ class StarkConfing(object):
         if self.combination_filter:
             result.extend(self.combination_filter)
         return result
-    #自定义编辑按钮
+    #7:自定义编辑按钮
     edit_link = []
     def get_edit_link(self):
         result = []
         if self.edit_link:
             result.extend(self.edit_link)
         return result
+    #8:排序
+    order_by = []
+    def get_order_by(self):
+        result = []
+        if self.order_by:
+            result.extend(self.order_by)
+        return result
+
 
     #构造方法
+
     def __init__(self, model_class, site):
         self.model_class = model_class
         self.site = site
@@ -376,7 +385,7 @@ class StarkConfing(object):
                     break
             if flag:
                 combination_filter["%s__in" % key] = value_list
-        queryset = self.model_class.objects.filter(self.get_search_condition()).filter(**combination_filter).distinct()
+        queryset = self.model_class.objects.filter(self.get_search_condition()).filter(**combination_filter).order_by(*self.get_order_by()).distinct()
         cl = Changelist(self,queryset)
         return render(request, "stark/changelist_view.html", {'cl': cl})
         #添加
