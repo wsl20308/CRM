@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d49994-d35a-4633-96e0-5770d14022c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stark/templates/stark/layout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/single_view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xxxxxx.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/301d37a7-3d7d-49ec-9fed-9c4c8145c83a.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed/_metadata_/metadata_i.len" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/325fb76c-3ad0-4417-a0e1-2b86858ce5ed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/congfigs/customer.py" afterPath="$PROJECT_DIR$/crm/congfigs/customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/models.py" afterPath="$PROJECT_DIR$/crm/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/service/v1.py" afterPath="$PROJECT_DIR$/stark/service/v1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/static/stark/css/stark-form.css" afterPath="$PROJECT_DIR$/stark/static/stark/css/stark-form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/templates/stark/add_view.html" afterPath="$PROJECT_DIR$/stark/templates/stark/add_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/templates/stark/change_view.html" afterPath="$PROJECT_DIR$/stark/templates/stark/change_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/templates/stark/changelist_view.html" afterPath="$PROJECT_DIR$/stark/templates/stark/changelist_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stark/templates/stark/layout.html" afterPath="$PROJECT_DIR$/stark/templates/stark/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public_view.html" afterPath="$PROJECT_DIR$/templates/public_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/single_view.html" afterPath="$PROJECT_DIR$/templates/single_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user_view.html" afterPath="$PROJECT_DIR$/templates/user_view.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,8 +63,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crm/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="169" column="4" lean-forward="false" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="14" />
+            <state relative-caret-position="-9">
+              <caret line="169" column="4" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="14" />
               <folding>
                 <element signature="e#348#836#0" expanded="false" />
                 <element signature="e#871#1090#0" expanded="false" />
@@ -87,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crm/congfigs/customer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="65" column="99" lean-forward="false" selection-start-line="65" selection-start-column="99" selection-end-line="65" selection-end-column="99" />
+            <state relative-caret-position="181">
+              <caret line="111" column="27" lean-forward="false" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
               <folding>
                 <element signature="e#46#74#0" expanded="true" />
                 <element signature="e#312#457#0" expanded="false" />
@@ -99,22 +94,13 @@
                 <element signature="e#746#826#0" expanded="false" />
                 <element signature="e#890#967#0" expanded="false" />
                 <element signature="e#1143#1790#0" expanded="false" />
-                <element signature="e#2164#2169#0" expanded="false" />
-                <element signature="e#2727#3550#0" expanded="false" />
-                <element signature="e#3593#3874#0" expanded="false" />
-                <element signature="e#3919#3992#1" expanded="false" />
-                <element signature="e#4361#4542#1" expanded="false" />
+                <element signature="e#1835#2734#0" expanded="false" />
+                <element signature="e#2191#2196#0" expanded="false" />
+                <element signature="e#2788#3611#0" expanded="false" />
+                <element signature="e#3654#3935#0" expanded="false" />
+                <element signature="e#3980#4053#1" expanded="false" />
+                <element signature="e#4422#4603#1" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stark/templates/stark/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,8 +108,8 @@
       <file leaf-file-name="v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stark/service/v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="390" column="11" lean-forward="true" selection-start-line="390" selection-start-column="11" selection-end-line="390" selection-end-column="11" />
+            <state relative-caret-position="708">
+              <caret line="390" column="11" lean-forward="false" selection-start-line="390" selection-start-column="11" selection-end-line="390" selection-end-column="11" />
               <folding>
                 <element signature="e#66#98#0" expanded="true" />
                 <element signature="e#343#1675#0" expanded="false" />
@@ -169,16 +155,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single_view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/single_view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -201,14 +177,18 @@
         <option value="$PROJECT_DIR$/stark/templates/stark/form.html" />
         <option value="$PROJECT_DIR$/crm/stark.py" />
         <option value="$PROJECT_DIR$/MDM/settings.py" />
-        <option value="$PROJECT_DIR$/templates/public_view.html" />
-        <option value="$PROJECT_DIR$/templates/user_view.html" />
-        <option value="$PROJECT_DIR$/templates/single_view.html" />
         <option value="$PROJECT_DIR$/crm/models.py" />
         <option value="$PROJECT_DIR$/xxxxxx.py" />
         <option value="$PROJECT_DIR$/stark/service/v1.py" />
-        <option value="$PROJECT_DIR$/crm/congfigs/customer.py" />
+        <option value="$PROJECT_DIR$/stark/templates/stark/changelist_view.html" />
+        <option value="$PROJECT_DIR$/stark/templates/stark/change_view.html" />
         <option value="$PROJECT_DIR$/stark/templates/stark/layout.html" />
+        <option value="$PROJECT_DIR$/stark/static/stark/css/stark-form.css" />
+        <option value="$PROJECT_DIR$/stark/templates/stark/add_view.html" />
+        <option value="$PROJECT_DIR$/templates/public_view.html" />
+        <option value="$PROJECT_DIR$/templates/single_view.html" />
+        <option value="$PROJECT_DIR$/templates/user_view.html" />
+        <option value="$PROJECT_DIR$/crm/congfigs/customer.py" />
       </list>
     </option>
   </component>
@@ -262,47 +242,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stark" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,11 +522,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12859304" sideWeight="0.83797055" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17776097" sideWeight="0.83797055" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0015128592" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27958834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15265866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -669,7 +609,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="n#block#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -684,11 +629,12 @@
             <element signature="e#746#826#0" expanded="false" />
             <element signature="e#890#967#0" expanded="false" />
             <element signature="e#1143#1790#0" expanded="false" />
-            <element signature="e#2164#2169#0" expanded="false" />
-            <element signature="e#2727#3550#0" expanded="false" />
-            <element signature="e#3593#3874#0" expanded="false" />
-            <element signature="e#3919#3992#1" expanded="false" />
-            <element signature="e#4361#4542#1" expanded="false" />
+            <element signature="e#1835#2734#0" expanded="false" />
+            <element signature="e#2191#2196#0" expanded="false" />
+            <element signature="e#2788#3611#0" expanded="false" />
+            <element signature="e#3654#3935#0" expanded="false" />
+            <element signature="e#3980#4053#1" expanded="false" />
+            <element signature="e#4422#4603#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -813,6 +759,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -913,20 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stark/templates/stark/changelist_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stark/templates/stark/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/10dc3012/301d37a7-3d7d-49ec-9fed-9c4c8145c83a/main.crm_userinfo" />
     <entry file="file://$PROJECT_DIR$/crm/stark.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1024,20 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Python36/Lib/site-packages/django/db/models/sql/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1062,18 +981,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/single_view.html">
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+          <folding>
+            <element signature="n#form#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/static/stark/css/stark-form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/changelist_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/add_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/change_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templatetags/change_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stark/templates/stark/my_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="169" column="4" lean-forward="false" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="14" />
+        <state relative-caret-position="-9">
+          <caret line="169" column="4" lean-forward="true" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="14" />
           <folding>
             <element signature="e#348#836#0" expanded="false" />
             <element signature="e#871#1090#0" expanded="false" />
@@ -1090,10 +1073,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/single_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding>
+            <element signature="n#block#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stark/service/v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="390" column="11" lean-forward="true" selection-start-line="390" selection-start-column="11" selection-end-line="390" selection-end-column="11" />
+        <state relative-caret-position="708">
+          <caret line="390" column="11" lean-forward="false" selection-start-line="390" selection-start-column="11" selection-end-line="390" selection-end-column="11" />
           <folding>
             <element signature="e#66#98#0" expanded="true" />
             <element signature="e#343#1675#0" expanded="false" />
@@ -1140,8 +1152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crm/congfigs/customer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="65" column="99" lean-forward="false" selection-start-line="65" selection-start-column="99" selection-end-line="65" selection-end-column="99" />
+        <state relative-caret-position="181">
+          <caret line="111" column="27" lean-forward="false" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
           <folding>
             <element signature="e#46#74#0" expanded="true" />
             <element signature="e#312#457#0" expanded="false" />
@@ -1149,20 +1161,13 @@
             <element signature="e#746#826#0" expanded="false" />
             <element signature="e#890#967#0" expanded="false" />
             <element signature="e#1143#1790#0" expanded="false" />
-            <element signature="e#2164#2169#0" expanded="false" />
-            <element signature="e#2727#3550#0" expanded="false" />
-            <element signature="e#3593#3874#0" expanded="false" />
-            <element signature="e#3919#3992#1" expanded="false" />
-            <element signature="e#4361#4542#1" expanded="false" />
+            <element signature="e#1835#2734#0" expanded="false" />
+            <element signature="e#2191#2196#0" expanded="false" />
+            <element signature="e#2788#3611#0" expanded="false" />
+            <element signature="e#3654#3935#0" expanded="false" />
+            <element signature="e#3980#4053#1" expanded="false" />
+            <element signature="e#4422#4603#1" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stark/templates/stark/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>

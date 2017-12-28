@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale">
-    <title>公共客户列表</title>
-</head>
-<body>
-    <table border="1">
+{% extends "stark/layout.html" %}
+{% block body %}
+    <h1>公共客户列表</h1>
+    <table border="1" class="table table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
@@ -22,11 +16,17 @@
                     <th>{{ row.id }}</th>
                     <th>{{ row.name }}</th>
                     <th>{{ row.qq }}</th>
-                    <th><a href="/stark/crm/customer/{{ row.id }}/competition/">抢单</a></th>
+                    <th>
+                        {% if row.conconsultant_id == current_user_id %}
+                            <a>无权抢单</a>
+                        {% else %}
+                            <a href="/stark/crm/customer/{{ row.id }}/competition/">抢单</a>
+                        {% endif %}
+                    </th>
+
                 </tr>
             {% endfor %}
 
         </tbody>
     </table>
-</body>
-</html>
+{% endblock %}

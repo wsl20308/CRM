@@ -51,7 +51,7 @@ class CustomerConfig(v1.StarkConfing):
         :return: 公共客户资源
                 条件：未报名 并且 （ 15天未成单(当前时间-15 > 接客时间) or  3天未跟进(当前时间-3天>最后跟进日期) ） Q对象
         """
-
+        current_user_id = 2
         ctime = datetime.datetime.now().date()
         no_deal = ctime-datetime.timedelta(days=15)        #十五天未成单，根据接单时间
         no_follow = ctime-datetime.timedelta(days=3)       #三天未跟进，根据最后跟进日期
@@ -65,7 +65,7 @@ class CustomerConfig(v1.StarkConfing):
         #
         # customer_obj_list = models.Customer.objects.filter(q1, status=2).exclude(consultant_id=2)
         coustomer_list = models.Customer.objects.filter(Q(recv_date__lt=no_deal)|Q(last_consult_date__lt=no_follow),status=2)
-        return render(request,"public_view.html",{'coustomer_list':coustomer_list})
+        return render(request,"public_view.html",{'coustomer_list':coustomer_list,'current_user_id':current_user_id})
 
     def competition_view(self,request,nid):
         """

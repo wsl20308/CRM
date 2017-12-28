@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale">
-    <title>当前用户的客户表</title>
-</head>
-<body>
-    <table border="1">
+{% extends "stark/layout.html" %}
+{% block body %}
+    <h1>当前用户的客户信息</h1>
+    <table class="table table-bordered">
        <thead>
             <tr>
                 <th>QQ</th>
                 <th>姓名</th>
-                <th>状态</th>
+{#                <th>状态</th>#}
             </tr>
        </thead>
        <tbody>
@@ -20,10 +14,9 @@
                 <tr>
                     <th>{{ row.customer.qq }}</th>
                     <th>{{ row.customer.name }}</th>
-                    <th>{{ row.customer.status }}</th>
+{#                    <th>{{ row.customer.status }}</th>#}
                 </tr>
             {% endfor %}
        </tbody>
     </table>
-</body>
-</html>
+{% endblock %}

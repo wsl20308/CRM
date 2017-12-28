@@ -1,13 +1,6 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static "stark/bootstrap-3.3.7-dist/css/bootstrap.css" %}"/>
-   <style>
+{% extends "stark/layout.html" %}
+{% block css %}
+    <style>
         .list-filter a{
             display: inline-block;
             padding: 3px 6px;
@@ -19,9 +12,9 @@
             color: white;
         }
     </style>
-</head>
-<body>
-<div class="container">
+{% endblock %}
+{% block body %}
+    <div class="container">
     <h1>列表页面</h1>
     <div class="list-filter">
         {% for filter_row in cl.gen_combination_filter %}
@@ -84,5 +77,5 @@
         </ul>
     </nav>
 </div>
-</body>
-</html>
+{% endblock %}
+
