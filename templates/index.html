@@ -1,0 +1,4 @@
+{% extends 'stark/layout.html' %}
+{% block body %}
+    <h1>欢迎登录： {{ request.session.user_info.name }}</h1>
+{% endblock %}

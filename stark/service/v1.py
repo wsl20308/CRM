@@ -105,7 +105,7 @@ class Changelist(object):
 
         #组合搜索
         self.combination_filter = config.get_combination_filter()
-
+        self.show_combination_filter = config.get_show_combination_filter()
         #搜索
         self.show_search_form = config.get_show_search_form()
         self.search_form_val = config.request.GET.get(config.serch_key,'')
@@ -288,6 +288,9 @@ class StarkConfing(object):
         if self.combination_filter:
             result.extend(self.combination_filter)
         return result
+    show_combination_filter= False
+    def get_show_combination_filter(self):
+        return self.show_combination_filter
     #7:自定义编辑按钮
     edit_link = []
     def get_edit_link(self):
@@ -305,7 +308,6 @@ class StarkConfing(object):
 
 
     #构造方法
-
     def __init__(self, model_class, site):
         self.model_class = model_class
         self.site = site
@@ -372,6 +374,7 @@ class StarkConfing(object):
             func_name_str = request.POST.get('list_action')
             action_func = getattr(self,func_name_str)
             ret = action_func(request)
+
             if ret:
                 return ret
         combination_filter = {}
@@ -408,7 +411,7 @@ class StarkConfing(object):
             #             temp['is_popup'] = True
             #             temp['popup_url'] = popup_url
             #     new_form.append(temp)
-            return render(request,'stark/add_view.html',{'form':form,})
+            return render(request,'stark/add_view.html',{'form':form,'confing':self})
         else:
             form =  model_form_class (request.POST)
             if form.is_valid():
@@ -424,7 +427,7 @@ class StarkConfing(object):
                     list_query_str = self.request.GET.get(self._query_param_key)
                     list_url = '%s?%s'%(self.get_changelist_url(),list_query_str)
                     return redirect(list_url)
-            return render(request, 'stark/add_view.html',{'form':form})
+            return render(request, 'stark/add_view.html',{'form':form,'confing':self})
     def delete_view(self, request, nid, *args, **kwargs):
         """删除"""
         obj = self.model_class.objects.filter(pk=nid)
@@ -446,7 +449,7 @@ class StarkConfing(object):
         model_form_class=self.get_model_form_class()
         if request.method=="GET":
             form = model_form_class(instance=obj)
-            return render(request,'stark/change_view.html',{'form':form})
+            return render(request,'stark/change_view.html',{'form':form,'confing':self})
         else:
             form = model_form_class(instance=obj, data=request.POST)
             if form.is_valid():
@@ -454,7 +457,7 @@ class StarkConfing(object):
                 list_query_str = self.request.GET.get(self._query_param_key)
                 list_url = '%s?%s'%(self.get_changelist_url(),list_query_str)
                 return redirect(list_url)
-            return render(request, 'stark/change_view.html', {'form': form})
+            return render(request, 'stark/change_view.html', {'form': form,'confing':self})
 
 class StarkSite(object):
     def __init__(self):

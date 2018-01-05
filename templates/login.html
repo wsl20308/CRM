@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "bootstrap-3.3.7-dist/css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap-3.3.7-dist/js/bootstrap.js" %}">
+</head>
+<body>
+    <form method="post" novalidate>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4">
+                <h3>请登录：</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.username }} {{ form.errors.username.0 }}
+                    <hr>
+                    {{ form.password }} {{ form.errors.password.0 }}
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
+

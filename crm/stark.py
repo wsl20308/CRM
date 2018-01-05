@@ -3,10 +3,50 @@
 from stark.service import v1
 from crm import models
 from crm.congfigs.customer import CustomerConfig
+from django.shortcuts import redirect,HttpResponse,render
+class BasePermission(object):
+    """
+    用于多继承
+    根据权限，定制页面显示，stark组件预留钩子
+    """
+    def get_show_add_btn(self):
+        code_list = self.request.permission_code_list
+        if "add" in code_list:
+            return True
+
+    def get_edit_link(self):
+        code_list = self.request.permission_code_list
+        if "edit" in code_list:
+            return super(SchoolConfing,self).get_edit_link()
+        else:
+            return []
+
+    def get_list_display(self):
+        code_list = self.request.permission_code_list
+        data = []
+        if self.list_dsplay:
+            data.extend(self.list_dsplay)
+            if 'del' in code_list:
+                data.append(v1.StarkConfing.delete)
+            data.insert(0, v1.StarkConfing.checkbox)
+        return data
+
+
+
+
 class DepartmentConfig(v1.StarkConfing):
     """部门管理"""
     list_dsplay = ['id','title']
-    # edit_link = ['title']
+    edit_link = ['title']
+            # def get_list_diplay(self):
+            #     code_list = self.request.permission_code_list
+            #     data = []
+            #     if self.list_display:
+            #         data.extend(self.list_display)
+            #         if 'del' in code_list:
+            #             data.append(v1.StarkConfig.delete)
+            #         data.insert(0, v1.StarkConfig.checkbox)
+            #     return data
     #重新显示编辑按钮，重写get_list_dsplay
     # def get_list_dsplay(self):
     #     result = []
@@ -35,6 +75,21 @@ class SchoolConfig(v1.StarkConfing):
     """学校管理"""
     list_dsplay = ['title']
     edit_link = ['title']
+        # def get_edit_link(self):
+        #     code_list = self.request.permission_code_list
+        #     if "edit" in code_list:
+        #         return super(SchoolConfig, self).get_edit_link()
+        #     else:
+        #         return []
+        # def get_list_diplay(self):
+        #     code_list = self.request.permission_code_list
+        #     data = []
+        #     if self.list_display:
+        #         data.extend(self.list_display)
+        #         if 'del' in code_list:
+        #             data.append(v1.StarkConfig.delete)
+        #         data.insert(0, v1.StarkConfig.checkbox)
+        #     return data
 v1.site.register(models.School,SchoolConfig)
 class ClassListConfig(v1.StarkConfing):
     """班级管理"""
@@ -59,3 +114,22 @@ class ClassListConfig(v1.StarkConfing):
 v1.site.register(models.ClassList,ClassListConfig)
 
 v1.site.register(models.Customer,CustomerConfig)
+
+class ConsultRecordConfig(v1.StarkConfing):
+    """
+    客户跟进记录
+    """
+    list_dsplay = ['customer','consultant','date']
+    combination_filter =[
+        v1.FilterOption('customer')
+    ]
+    def changelist_view(self,request,*args,**kwargs):
+        customer = request.GET.get('customer')
+        # session中获取当前用户ID
+        current_login_user_id = 2
+        ct = models.Customer.objects.filter(consultant=current_login_user_id,id=customer).count()
+        if not ct:
+            return HttpResponse('别抢客户呀...')
+        return super(ConsultRecordConfig,self).changelist_view(request,*args,**kwargs)
+
+v1.site.register(models.ConsultRecord,ConsultRecordConfig)

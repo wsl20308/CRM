@@ -16,7 +16,8 @@
 {% block body %}
     <div class="container">
     <h1>列表页面</h1>
-    <div class="list-filter">
+    {% if cl.show_comb_filter %}
+        <div class="list-filter">
         {% for filter_row in cl.gen_combination_filter %}
             <div>
                 {% for col in filter_row %}
@@ -24,6 +25,7 @@
                 {% endfor %}
             </div>
         {% endfor %}
+    {% endif %}
     </div>
     <hr>
     <div class="form-group pull-right">

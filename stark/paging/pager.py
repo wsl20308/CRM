@@ -13,7 +13,7 @@ class Pagination(object):
     """
     自定义分页
     """
-    def __init__(self,current_page,total_count,base_url,params,per_page_count=20,max_pager_count=11):#一页显示20条数据，一页有11个按钮
+    def __init__(self,current_page,total_count,base_url,params,per_page_count=10,max_pager_count=11):#一页显示xx条数据，一页有11个按钮
         try:
             current_page = int(current_page)
         except Exception as e:

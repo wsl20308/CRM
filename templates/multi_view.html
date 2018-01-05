@@ -1,0 +1,10 @@
+{% extends "stark/layout.html" %}
+{% block body %}
+     <h1 >单条录入</h1>
+    <a href="/static/aaa.xlsx">下载模板</a>
+    <form method="post" enctype="multipart/form-data" class="form-horizontal" novalidate>
+        {% csrf_token %}
+        <input type="file" name="exfile">
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}
